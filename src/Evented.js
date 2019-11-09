@@ -12,7 +12,8 @@ define([
         isFunction = types.isFunction,
         isString = types.isString,
         isEmptyObject = types.isEmptyObject,
-        mixin = objects.mixin;
+        mixin = objects.mixin,
+        safeMixin = objects.safeMixin;
 
     function parse(event) {
         var segs = ("" + event).split(".");
@@ -277,6 +278,11 @@ define([
             return this;
         }
     });
+
+    Evented.createEvent = function (type,props) {
+        var e = new CustomEvent(type,props);
+        return safeMixin(e, props);
+    };
 
     return skylark.attach("langx.Evented",Evented);
 
