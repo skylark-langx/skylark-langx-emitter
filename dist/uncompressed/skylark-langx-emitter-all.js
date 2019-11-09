@@ -1488,7 +1488,7 @@ define('skylark-langx-klass/main',[
 });
 define('skylark-langx-klass', ['skylark-langx-klass/main'], function (main) { return main; });
 
-define('skylark-langx-emitter/Evented',[
+define('skylark-langx-emitter/Emitter',[
   "skylark-langx-ns/ns",
   "skylark-langx-types",
   "skylark-langx-objects",
@@ -1513,7 +1513,7 @@ define('skylark-langx-emitter/Evented',[
         };
     }
 
-    var Evented = klass({
+    var Emitter = klass({
         on: function(events, selector, data, callback, ctx, /*used internally*/ one) {
             var self = this,
                 _hub = this._hub || (this._hub = {});
@@ -1565,7 +1565,7 @@ define('skylark-langx-emitter/Evented',[
             return this.on(events, selector, data, callback, ctx, 1);
         },
 
-        trigger: function(e /*,argument list*/ ) {
+        emit: function(e /*,argument list*/ ) {
             if (!this._hub) {
                 return this;
             }
@@ -1769,18 +1769,27 @@ define('skylark-langx-emitter/Evented',[
         }
     });
 
-    Evented.createEvent = function (type,props) {
+    Emitter.prototype.trigger = Emitter.prototype.emit;
+
+    Emitter.createEvent = function (type,props) {
         var e = new CustomEvent(type,props);
         return safeMixin(e, props);
     };
 
-    return skylark.attach("langx.Evented",Evented);
+    return skylark.attach("langx.Emitter",Emitter);
 
 });
+define('skylark-langx-emitter/Evented',[
+  "skylark-langx-ns/ns",
+	"./Emitter"
+],function(skylark,Emitter){
+	return skylark.attach("langx.Evented",Emitter);
+});
 define('skylark-langx-emitter/main',[
+	"./Emitter",
 	"./Evented"
-],function(Evented){
-	return Evented;
+],function(Emitter){
+	return Emitter;
 });
 define('skylark-langx-emitter', ['skylark-langx-emitter/main'], function (main) { return main; });
 

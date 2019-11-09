@@ -5,5 +5,5 @@
  * @link www.skylarkjs.org
  * @license MIT
  */
-define(["./Evented"],function(e){return e});
+define(["./Emitter","./Evented"],function(e){return e});
 //# sourceMappingURL=sourcemaps/main.js.map
