@@ -21,11 +21,11 @@
   "license": "MIT",
   "bugs": "https://github.com/skylarklangx/skylark-langx/issues",
   "dependencies": {
-    "skylark-langx-ns": "https://github.com/skylarklangx/skylark-langx-ns#master",
-    "skylark-langx-types": "https://github.com/skylarklangx/skylark-langx-types#master",
-    "skylark-langx-klass": "https://github.com/skylarklangx/skylark-langx-klass#master",
-    "skylark-langx-arrays": "https://github.com/skylarklangx/skylark-langx-arrays#master",
-    "skylark-langx-objects": "https://github.com/skylarklangx/skylark-langx-objects#master"
+    "skylark-langx-ns": "https://github.com/skylark-langx/skylark-langx-ns#master",
+    "skylark-langx-types": "https://github.com/skylark-langx/skylark-langx-types#master",
+    "skylark-langx-klass": "https://github.com/skylark-langx/skylark-langx-klass#master",
+    "skylark-langx-arrays": "https://github.com/skylark-langx/skylark-langx-arrays#master",
+    "skylark-langx-objects": "https://github.com/skylark-langx/skylark-langx-objects#master"
   },
   "engines": {
     "node": ">=0.8.0"
