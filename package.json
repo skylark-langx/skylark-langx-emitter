@@ -21,12 +21,7 @@
   "license": "MIT",
   "bugs": "https://github.com/skylarklangx/skylark-langx/issues",
   "dependencies": {
-    "skylark-langx-arrays": "git+https://github.com/skylark-langx/skylark-langx-arrays.git#master",
-    "skylark-langx-funcs": "git+https://github.com/skylark-langx/skylark-langx-funcs.git#master",
-    "skylark-langx-klass": "git+https://github.com/skylark-langx/skylark-langx-klass.git#master",
-    "skylark-langx-ns": "git+https://github.com/skylark-langx/skylark-langx-ns.git#master",
-    "skylark-langx-objects": "git+https://github.com/skylark-langx/skylark-langx-objects.git#master",
-    "skylark-langx-types": "git+https://github.com/skylark-langx/skylark-langx-types.git#master"
+    "skylark-langx-events": "git+https://github.com/skylark-langx/skylark-langx-events.git#master"
   },
   "engines": {
     "node": ">=0.8.0"
