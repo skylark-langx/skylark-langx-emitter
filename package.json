@@ -9,7 +9,7 @@
   "homepage": "www.skylarkjs.org",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skylarklangx/skylark-langx-emitter.git"
+    "url": "https://github.com/skylarklangx/skylark-langx-emitter.git"
   },
   "keywords": [
     "skylark",
@@ -25,7 +25,7 @@
     "./*": "./dist/uncompressed/skylark-langx-emitter/*.js"
   },
   "dependencies": {
-    "skylark-langx-events": "git+https://github.com/skylark-langx/skylark-langx-events.git"
+    "skylark-langx-events": "https://github.com/skylark-langx/skylark-langx-events.git"
   },
   "engines": {
     "node": ">=0.8.0"
